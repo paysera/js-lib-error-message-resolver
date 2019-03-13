@@ -1,5 +1,7 @@
 # @paysera/error-message-resolver
 
+[![Build Status](https://travis-ci.com/paysera/js-lib-error-message-resolver.svg?branch=master)](https://travis-ci.com/paysera/js-lib-error-message-resolver)
+
 ## Services
 
 ### isHttpError
