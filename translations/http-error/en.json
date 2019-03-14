@@ -1,7 +1,0 @@
-{
-    "forbidden": "Not allowed.",
-    "internal_server_error": "Error occurred, it was reported. Please try again later.",
-    "invalid_parameters": "Provided data is incorrect. Please try again.",
-    "invalid_request": "Incorrect request. Please try again.",
-    "network_error": "Internet connection problems. Check connection settings and try again."
-}

@@ -1,49 +1,50 @@
 {
-  "name": "@paysera/error-message-resolver",
-  "version": "1.0.0",
-  "description": "Util to help resolve error message for errors",
-  "main": "dist/main.js",
-  "scripts": {
-    "build": "rimraf dist && webpack --mode production --config webpack.config.js",
-    "lint": "eslint src/",
-    "test": "jest --config jest.config.js",
-    "test:watch": "jest --config jest.config.js --watchAll",
-    "test:coverage": "jest --config jest.config.js --no-cache --coverage",
-    "prepublishOnly": "rimraf dist && npm run build"
-  },
-  "files": [
-    "package.json",
-    "README.md",
-    "dist",
-    "src"
-  ],
-  "keywords": [
-    "paysera",
-    "http",
-    "error"
-  ],
-  "author": "Paysera",
-  "license": "MIT",
-  "devDependencies": {
-    "@babel/core": "^7.3.4",
-    "@babel/plugin-transform-runtime": "^7.3.4",
-    "@babel/preset-env": "^7.3.4",
-    "@paysera/eslint-config": "^1.0.0",
-    "babel-jest": "^24.1.0",
-    "babel-loader": "^8.0.5",
-    "eslint": "^5.3.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.12.4",
-    "i18next-parser": "^1.0.0-beta34",
-    "jest": "^24.1.0",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.2.3",
-    "webpack-node-externals": "^1.7.2"
-  },
-  "dependencies": {
-    "i18next": "^15.0.5",
-    "lodash": "^4.17.11",
-    "moment": "^2.24.0"
-  }
+    "name": "@paysera/error-message-resolver",
+    "version": "1.0.0",
+    "description": "Util to help resolve error message for errors",
+    "main": "dist/main.js",
+    "scripts": {
+        "build": "webpack --mode production --config webpack.config.js",
+        "i18next:parse": "i18next --config i18next-parser.config.js",
+        "lint": "eslint src/",
+        "test": "jest --config jest.config.js",
+        "test:watch": "jest --config jest.config.js --watchAll",
+        "test:coverage": "jest --config jest.config.js --no-cache --coverage",
+        "prepublishOnly": "rimraf dist && npm run build"
+    },
+    "files": [
+        "package.json",
+        "README.md",
+        "dist",
+        "src"
+    ],
+    "keywords": [
+        "paysera",
+        "http",
+        "error"
+    ],
+    "author": "Paysera",
+    "license": "MIT",
+    "devDependencies": {
+        "@babel/core": "^7.3.4",
+        "@babel/plugin-transform-runtime": "^7.3.4",
+        "@babel/preset-env": "^7.3.4",
+        "@paysera/eslint-config": "^1.0.0",
+        "babel-jest": "^24.1.0",
+        "babel-loader": "^8.0.5",
+        "eslint": "^5.3.0",
+        "eslint-plugin-import": "^2.16.0",
+        "eslint-plugin-jsx-a11y": "^6.2.1",
+        "eslint-plugin-react": "^7.12.4",
+        "i18next-parser": "^1.0.0-beta34",
+        "jest": "^24.1.0",
+        "webpack": "^4.29.6",
+        "webpack-cli": "^3.2.3",
+        "webpack-node-externals": "^1.7.2"
+    },
+    "dependencies": {
+        "i18next": "^15.0.5",
+        "lodash": "^4.17.11",
+        "moment": "^2.24.0"
+    }
 }
