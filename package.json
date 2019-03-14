@@ -1,7 +1,7 @@
 {
     "name": "@paysera/error-message-resolver",
     "version": "1.0.0",
-    "description": "Util to help resolve error message for errors",
+    "description": "Library that helps resolve error messages",
     "main": "dist/main.js",
     "scripts": {
         "build": "webpack --mode production --config webpack.config.js",
