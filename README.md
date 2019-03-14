@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.com/paysera/js-lib-error-message-resolver.svg?branch=master)](https://travis-ci.com/paysera/js-lib-error-message-resolver)
 [![Coverage Status](https://coveralls.io/repos/github/paysera/js-lib-error-message-resolver/badge.svg?branch=master)](https://coveralls.io/github/paysera/js-lib-error-message-resolver?branch=master)
+[![dependencies](https://david-dm.org/paysera/js-lib-error-message-resolver.svg)](https://david-dm.org/paysera/js-lib-error-message-resolver)
+[![devDependencies](https://david-dm.org/paysera/js-lib-error-message-resolver/dev-status.svg)](https://david-dm.org/paysera/js-lib-error-message-resolver#info=devDependencies)
 
 ## Services
 
