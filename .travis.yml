@@ -1,5 +1,24 @@
 language: node_js
-node_js:
-  - '8'
-before_install:
-  - npm i -g npm@6.9
+
+matrix:
+  include:
+    - node_js: 8
+      env: RELEASE="true"
+    - node_js: 9
+    - node_js: 10
+
+deploy:
+  provider: npm
+  email: npmjs@paysera.com
+  api_key:
+    secure: 0Z4ZpeMPG7WlNXx4qWzRiUKvP9Q0x+VIX/Stq+3IAZNNb1Zvh/LvZNZHWeDc+n+XU7Oi35m0BMKonF0QFi2ahYWSmZXvmuTfGuiDKCTleRzVe+/0kwn+9CxzTiME+ZmoLBZBsCBCQzvPw9gtHyoGGRU8+djkztBSgcaj/vQQHpRCiq9LQYPld2WIKBFowh090V5tCRU2ZeZg8IuZxVL0QmOgkPmQr1w8ObB3+7VttQsRl5Y7Ve9e/ykej/LnAUdeL5moaJAS+xnMWnew1Osx9vQdqO8mE3C/qBOE9/zi6VuylLSX/y87oO8St37iIS0qjMM/0PWHO6lsqteJvBAx+eglWsDAal/RGK5Hpm1MX4fjwBW/PFbWE8gGNtitJylIT+i2NcNHGrS+jV5AIbhYLTrz8I4Y89/uV6GYWwWHjsFpeszZpLFhXE0Vz+DI5Ls169qzCHFDLQF5WLHtZFfdhGCWKTvsfwXsTmeAw+MCHGgJa1XplEeSKi5kGI3tZkR7aPnmxNioY8STZks45yEt9dx81oe/0R8utiF4I6Zx3NIGzh55MWskxxvHSf01bndHIA4jSeKBW3VRn5Rkel7pgZaUj5CFQ6xAhkvpngNhQLn6FOa8KeZQyUaeTbFZBHWF3LxfWaEmX1GICMA4UuIatCQD0xAPSvRM+0G4H//nzaY=
+  on:
+    tags: true
+    repo: paysera/js-lib-error-message-resolver
+    condition: "$RELEASE = true"
+  skip_cleanup: true
+
+script:
+  - npm run test:coverage && cat ./coverage/lcov.info | node_modules/.bin/coveralls
+
+after_success: coveralls
