@@ -23,6 +23,17 @@
         "http",
         "error"
     ],
+    "homepage": "https://github.com/paysera/js-lib-error-message-resolver#readme",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/paysera/js-lib-error-message-resolver"
+    },
+    "bugs": {
+        "url": "https://github.com/paysera/js-lib-error-message-resolver/issues"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
     "author": "Paysera",
     "license": "MIT",
     "devDependencies": {
@@ -32,12 +43,14 @@
         "@paysera/eslint-config": "^1.0.0",
         "babel-jest": "^24.1.0",
         "babel-loader": "^8.0.5",
+        "coveralls": "^3.0.3",
         "eslint": "^5.3.0",
         "eslint-plugin-import": "^2.16.0",
         "eslint-plugin-jsx-a11y": "^6.2.1",
         "eslint-plugin-react": "^7.12.4",
-        "i18next-parser": "^1.0.0-beta34",
+        "i18next-parser": "1.0.0-beta34",
         "jest": "^24.1.0",
+        "rimraf": "^2.6.3",
         "webpack": "^4.29.6",
         "webpack-cli": "^3.2.3",
         "webpack-node-externals": "^1.7.2"
