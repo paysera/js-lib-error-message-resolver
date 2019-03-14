@@ -1,5 +1,5 @@
 module.exports = {
-    defaultNamespace: 'http-error',
+    defaultNamespace: 'error-message-resolver',
     output: 'translations/$NAMESPACE/$LOCALE.json',
     locales: ['en'],
     sort: true,
