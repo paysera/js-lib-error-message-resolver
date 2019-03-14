@@ -1,6 +1,7 @@
 # @paysera/error-message-resolver
 
 [![Build Status](https://travis-ci.com/paysera/js-lib-error-message-resolver.svg?branch=master)](https://travis-ci.com/paysera/js-lib-error-message-resolver)
+[![Coverage Status](https://coveralls.io/repos/github/paysera/js-lib-error-message-resolver/badge.svg?branch=master)](https://coveralls.io/github/paysera/js-lib-error-message-resolver?branch=master)
 
 ## Services
 
