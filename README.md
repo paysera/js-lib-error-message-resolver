@@ -155,7 +155,7 @@ resolveHttpErrorMessage(
             },
             'invalid_request': Promise.resolve('Error: invalid_request'), // async string
         }))
-        .setStatus((new StatusMessageConfig()).setConfig({
+        .setStatus((new ErrorStatusMessageConfig()).setConfig({
             429: (errorResponse, waitForDuration) => { // too many request function
                 if (waitForDuration !== null) {
                     return `Too many requests, wait for: ${waitFor.asSeconds()}`;
