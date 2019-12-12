@@ -48,7 +48,7 @@
         "eslint-plugin-import": "^2.16.0",
         "eslint-plugin-jsx-a11y": "^6.2.1",
         "eslint-plugin-react": "^7.12.4",
-        "i18next-parser": "1.0.0-beta34",
+        "i18next-parser": "1.0.0-beta37",
         "jest": "^24.1.0",
         "rimraf": "^2.6.3",
         "webpack": "^4.29.6",
