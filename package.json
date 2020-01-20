@@ -56,7 +56,7 @@
         "webpack-node-externals": "^1.7.2"
     },
     "dependencies": {
-        "i18next": "^15.0.5",
+        "i18next": "^19.0.3",
         "lodash": "^4.17.11",
         "moment": "^2.24.0"
     }
