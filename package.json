@@ -1,6 +1,6 @@
 {
     "name": "@paysera/error-message-resolver",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Library that helps resolve error messages",
     "main": "dist/main.js",
     "scripts": {
@@ -56,7 +56,7 @@
         "webpack-node-externals": "^1.7.2"
     },
     "dependencies": {
-        "i18next": "^15.0.5",
+        "i18next": "^15.0.5 || ^19.0.0",
         "lodash": "^4.17.11",
         "moment": "^2.24.0"
     }
