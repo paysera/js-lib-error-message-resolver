@@ -1,6 +1,6 @@
 {
     "name": "@paysera/error-message-resolver",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Library that helps resolve error messages",
     "main": "dist/main.js",
     "scripts": {
