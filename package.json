@@ -41,7 +41,7 @@
         "@babel/plugin-transform-runtime": "^7.3.4",
         "@babel/preset-env": "^7.3.4",
         "@paysera/eslint-config": "^1.0.0",
-        "babel-jest": "^24.1.0",
+        "babel-jest": "^25.1.0",
         "babel-loader": "^8.0.5",
         "coveralls": "^3.0.3",
         "eslint": "^5.3.0",
