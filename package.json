@@ -1,22 +1,29 @@
 {
     "name": "@paysera/error-message-resolver",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "description": "Library that helps resolve error messages",
     "main": "dist/main.js",
+    "module": "es/index.js",
+    "sideEffects": false,
     "scripts": {
-        "build": "webpack --mode production --config webpack.config.js",
+        "build": "npm run build:umd && npm run build:es",
+        "build:umd": "webpack --mode production --config webpack.config.js",
+        "build:es": "cross-env BABEL_ENV=es babel ./src --out-dir es --copy-files --no-copy-ignored --ignore \"src/**/__tests__\"",
         "i18next:parse": "i18next --config i18next-parser.config.js",
+        "clean": "rimraf dist es",
         "lint": "eslint src/",
-        "test": "jest --config jest.config.js",
+        "test": "jest --config jest.config.js --no-cache",
         "test:watch": "jest --config jest.config.js --watchAll",
         "test:coverage": "jest --config jest.config.js --no-cache --coverage",
-        "prepublishOnly": "rimraf dist && npm run build"
+        "prepublishOnly": "npm run test && npm run clean && npm run build"
     },
     "files": [
         "package.json",
         "README.md",
         "dist",
-        "src"
+        "es",
+        "src",
+        "translations"
     ],
     "keywords": [
         "paysera",
@@ -36,28 +43,29 @@
     },
     "author": "Paysera",
     "license": "MIT",
-    "devDependencies": {
-        "@babel/core": "^7.3.4",
-        "@babel/plugin-transform-runtime": "^7.3.4",
-        "@babel/preset-env": "^7.3.4",
-        "@paysera/eslint-config": "^1.0.0",
-        "babel-jest": "^24.1.0",
-        "babel-loader": "^8.0.5",
-        "coveralls": "^3.0.3",
-        "eslint": "^5.3.0",
-        "eslint-plugin-import": "^2.16.0",
-        "eslint-plugin-jsx-a11y": "^6.2.1",
-        "eslint-plugin-react": "^7.12.4",
-        "i18next-parser": "1.0.0",
-        "jest": "^24.1.0",
-        "rimraf": "^3.0.0",
-        "webpack": "^4.29.6",
-        "webpack-cli": "^3.2.3",
-        "webpack-node-externals": "^1.7.2"
-    },
     "dependencies": {
         "i18next": "^15.0.5 || ^19.0.0",
         "lodash": "^4.17.11",
         "moment": "^2.24.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.8.4",
+        "@babel/core": "^7.8.7",
+        "@babel/plugin-transform-runtime": "^7.8.3",
+        "@babel/preset-env": "^7.8.7",
+        "@paysera/eslint-config": "^1.0.0",
+        "babel-loader": "^8.0.6",
+        "cross-env": "^7.0.2",
+        "eslint": "^6.8.0",
+        "eslint-plugin-import": "^2.20.1",
+        "eslint-plugin-jest": "^23.8.2",
+        "eslint-plugin-jsx-a11y": "^6.2.3",
+        "eslint-plugin-react": "^7.19.0",
+        "i18next-parser": "^1.0.2",
+        "jest": "^25.1.0",
+        "rimraf": "^3.0.2",
+        "webpack": "^4.42.0",
+        "webpack-cli": "^3.3.11",
+        "webpack-node-externals": "^1.7.2"
     }
 }
