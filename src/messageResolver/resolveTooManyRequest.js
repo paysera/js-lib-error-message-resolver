@@ -1,7 +1,6 @@
 import isNumber from 'lodash/isNumber';
 import isFunction from 'lodash/isFunction';
 import moment from 'moment';
-// TODO: import moment from '@appJs/momentWithLocale';
 
 /**
  * @param {ErrorResponse} errorResponse

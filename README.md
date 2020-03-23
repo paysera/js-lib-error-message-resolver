@@ -31,7 +31,7 @@ isHttpError(error); // => true
 
 ### isNetworkError
 
-Checks if given error is `axios` network error. Network error can happen for a number of reasons, for example poor 
+Checks if given error is `axios` network error. Network error can happen for a number of reasons, for example poor
 network, CSP, etc.
 
 Arguments:
@@ -53,7 +53,7 @@ isNetworkError(error); // => true
 ```
 
 ### resolveErrorMessage
- 
+
 `resolveErrorMessage` checks if an error is HTTP and if it is, passes to the `resolveHttpErrorMessage` to be handled. If
 error isn't HTTP, resolver will try to resolve correct message from `message.custom` or `message.default`.
 
@@ -64,6 +64,13 @@ Arguments:
 | **error**   | `any`                |         | :white_check_mark: | Error. `resolveErrorMessage` checks if it http error               |
 | **message** | `ErrorMessageConfig` |         | :white_check_mark: | Messages for error                                                 |
 
+Returns:
+
+`ErrorMessage` entity Object with keys `main` and `additional`:
+
+| type             | description                                                             |
+|------------------|-------------------------------------------------------------------------|
+| **ErrorMessage** | Instance of `ErrorMessage` which contains primary and secondary message |
 
 Example of `message` config:
 ```js

@@ -1,7 +1,8 @@
 {
-    "forbidden": "",
-    "internal_server_error": "",
-    "invalid_parameters": "",
-    "invalid_request": "",
-    "network_error": ""
+    "forbidden": "Forbidden",
+    "internal_server_error": "Internal server error",
+    "invalid_parameters": "Invalid parameters",
+    "invalid_request": "Invalid request",
+    "network_error": "Network error",
+    "error_code": "Error code: %correlationId%"
 }

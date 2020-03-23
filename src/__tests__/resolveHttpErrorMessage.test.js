@@ -2,6 +2,7 @@ import resolveHttpErrorMessage from '../resolveHttpErrorMessage';
 import HttpErrorMessageConfig from '../entity/HttpErrorMessageConfig';
 import ErrorDataMessageConfig from '../entity/ErrorDataMessageConfig';
 import ErrorStatusMessageConfig from '../entity/ErrorStatusMessageConfig';
+import translations from '../../translations/error-message-resolver/en.json';
 
 describe('resolveHttpErrorMessage', () => {
     test.each([
@@ -14,14 +15,15 @@ describe('resolveHttpErrorMessage', () => {
         [
             'Network error',
             { request: { status: 0 }, config: {} },
-            (new HttpErrorMessageConfig('Default message')).setNetwork('Network error'),
-            'Network error',
+            (new HttpErrorMessageConfig('Default message'))
+                .setNetwork('Custom network error message'),
+            'Custom network error message',
         ],
         [
             'Network error without given error translation',
             { request: { status: 0 }, config: {} },
             new HttpErrorMessageConfig('Default message'),
-            'network_error',
+            translations.network_error,
         ],
 
         [
@@ -98,7 +100,7 @@ describe('resolveHttpErrorMessage', () => {
                 response: { data: { error: 'invalid_parameters' } },
             },
             new HttpErrorMessageConfig('Default message'),
-            'invalid_parameters',
+            translations.invalid_parameters,
         ],
     ])(
         '%s',
@@ -144,7 +146,7 @@ describe('resolveHttpErrorMessage', () => {
         ],
         [
             { data: { error: 'forbidden' } },
-            'forbidden',
+            translations.forbidden,
         ],
     ])(
         '%# order',

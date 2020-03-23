@@ -3,7 +3,7 @@ import isFunction from 'lodash/isFunction';
 
 import isHttpError from './util/isHttpError';
 import createErrorResponse from './util/createErrorResponse';
-import resolveByResponseErrors from './errorMessageResolver/resolveByResponseErrors';
+import resolveByResponseErrors from './messageResolver/resolveByResponseErrors';
 
 import findFirstNotNullCondition from './condition/findFirstNotNullCondition';
 import defaultErrorMessageCondition from './condition/defaultErrorMessageCondition';

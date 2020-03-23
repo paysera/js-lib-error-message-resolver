@@ -1,4 +1,4 @@
-import resolveByResponseStatus from '../errorMessageResolver/resolveByResponseStatus';
+import resolveByResponseStatus from '../messageResolver/resolveByResponseStatus';
 
 /**
  * @param {ErrorResponse} errorResponse

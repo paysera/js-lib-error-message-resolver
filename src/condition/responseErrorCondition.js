@@ -1,4 +1,4 @@
-import resolveByResponseError from '../errorMessageResolver/resolveByResponseError';
+import resolveByResponseError from '../messageResolver/resolveByResponseError';
 
 /**
  * @param {ErrorResponse} errorResponse

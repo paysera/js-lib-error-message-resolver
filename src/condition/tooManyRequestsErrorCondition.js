@@ -1,6 +1,6 @@
 import isUndefined from 'lodash/isUndefined';
 
-import resolveTooManyRequest from '../errorMessageResolver/resolveTooManyRequest';
+import resolveTooManyRequest from '../messageResolver/resolveTooManyRequest';
 
 /**
  * @param {ErrorResponse} errorResponse

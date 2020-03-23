@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## 2.0.0
+### Changed
+- `resolveErrorMessage` from now returns instance of `ErrorMessage` that contains primary error message and secondary
+  messages.
+- lib exports `ErrorMessage` class
+
 ## 1.1.0
 ### Added
 - `npm run build:umd` - compiles `src` folder with webpack to build `umd` format module
