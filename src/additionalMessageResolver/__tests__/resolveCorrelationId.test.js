@@ -10,6 +10,13 @@ describe('resolveCorrelationId', () => {
             null,
         ],
         [
+            'For network error returns null',
+            {
+                request: { status: 0 },
+            },
+            null,
+        ],
+        [
             'For http errors with a status lower than 500 and not equal to 401 and 403 returns null',
             {
                 config: {},

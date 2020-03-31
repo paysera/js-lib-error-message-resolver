@@ -2,10 +2,14 @@ import isUndefined from 'lodash/isUndefined';
 import i18next from 'i18next';
 
 import isHttpError from '../util/isHttpError';
+import isNetworkError from '../util/isNetworkError';
 import createErrorResponse from '../util/createErrorResponse';
 
 const resolveCorrelationId = async (error) => {
-    if (!isHttpError(error)) {
+    if (
+        !isHttpError(error)
+        || isNetworkError(error)
+    ) {
         return null;
     }
 
