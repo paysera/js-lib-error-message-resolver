@@ -68,6 +68,6 @@
         "rimraf": "^3.0.2",
         "webpack": "^4.42.0",
         "webpack-cli": "^3.3.11",
-        "webpack-node-externals": "^1.7.2"
+        "webpack-node-externals": "^2.5.0"
     }
 }
