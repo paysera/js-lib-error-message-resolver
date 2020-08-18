@@ -19,6 +19,11 @@ describe('resolveByResponseStatus', () => {
             null,
         ],
         [
+            'Response data errors is array of strings',
+            (new ErrorResponse()).setData({ errors: null }),
+            null,
+        ],
+        [
             'Resolves first message from response data errors',
             (new ErrorResponse()).setData({
                 errors: [

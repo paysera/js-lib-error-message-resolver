@@ -12,6 +12,7 @@ import responseErrorCondition from './condition/responseErrorCondition';
 import responseStatusErrorCondition from './condition/responseStatusErrorCondition';
 import tooManyRequestsErrorCondition from './condition/tooManyRequestsErrorCondition';
 import maintenanceCondition from './condition/maintenanceCondition';
+import { resolveErrorResponseDescription } from './condition/resolveErrorResponseDescription';
 
 /**
  * @param {*} error
@@ -37,7 +38,7 @@ export default async (error, message) => {
         () => tooManyRequestsErrorCondition(errorResponse, message.getTooManyRequests()),
         () => responseStatusErrorCondition(errorResponse, message.getStatus()),
         () => resolveByResponseErrors(errorResponse),
-        () => get(errorResponse.getData(), 'error_description', null),
+        () => resolveErrorResponseDescription(errorResponse),
         () => defaultErrorMessageCondition(errorResponse),
     ];
 

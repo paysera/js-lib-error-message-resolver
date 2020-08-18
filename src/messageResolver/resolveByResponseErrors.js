@@ -9,6 +9,10 @@ import isUndefined from 'lodash/isUndefined';
 export default (errorResponse) => {
     const { errors = [] } = errorResponse.getData() || {};
 
+    if (errors === null) {
+        return null;
+    }
+
     const firstErrorMessage = errors.find(error => (
         isObject(error)
         && !isUndefined(error.message)
