@@ -112,6 +112,17 @@ describe('resolveHttpErrorMessage', () => {
     test.each([
         [
             {
+                status: 500,
+                data: {
+                    error: 'internal_server_error',
+                    errors: null,
+                    error_description: 'Internal error',
+                },
+            },
+            'Internal server error',
+        ],
+        [
+            {
                 status: 400,
                 data: {
                     error: 'invalid_request',
