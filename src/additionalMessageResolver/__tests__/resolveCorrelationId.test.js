@@ -62,6 +62,21 @@ describe('resolveCorrelationId', () => {
             'Error code: abc',
         ],
         [
+            'For http errors with a status equal to 409 returns `paysera-correlation-id` from response headers',
+            {
+                config: {},
+                request: {},
+                response: {
+                    status: 409,
+                    data: {},
+                    headers: {
+                        'paysera-correlation-id': 'abc',
+                    },
+                },
+            },
+            'Error code: abc',
+        ],
+        [
             'For http errors with a status equal to 500 returns `paysera-correlation-id` from response headers',
             {
                 config: {},

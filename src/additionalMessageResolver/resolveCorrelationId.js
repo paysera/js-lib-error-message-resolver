@@ -18,6 +18,7 @@ const resolveCorrelationId = async (error) => {
         errorResponse.getStatus() < 500
         && errorResponse.getStatus() !== 401
         && errorResponse.getStatus() !== 403
+        && errorResponse.getStatus() !== 409
     ) {
         return null;
     }
